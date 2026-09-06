@@ -64,5 +64,28 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Able42c5 is a company surfaced via the API Evangelist harvest backlog (source: secondary-market) and added to the network as a stub for full-pipeline profiling.
-- https://equityzen.com/company/able42c5
+Able was a San Francisco artificial-intelligence company for commercial lending, founded in 2020
+by Diego Represas and Andrew Hurst and operating at able.ai. Its platform used computer vision,
+RPA and machine learning to collect and categorize borrower documentation for high-value
+commercial loan transactions, generating transaction-aware document checklists and giving
+lenders, borrowers and third parties a shared workspace with per-document access controls. It
+exited stealth in June 2022 with a $20M Series A led by Canapi Ventures with participation from
+Human Capital, demonstrated at FinovateFall 2022, and advertised SOC 2 compliance.
+
+**Moody's acquired Able in March 2024** and absorbed it into its lending technology portfolio.
+The able.ai and ableai.com domains remain registered to Moody's registrant entity (MIS Quality
+Management Corp., CSC Corporate Domains), but the site is decommissioned: `https://www.able.ai/`
+presents no TLS certificate and aborts every handshake, and the plain-HTTP listener on that host
+301-redirects to Moody's Commercial Lending Solutions page.
+
+Able never published a developer portal, public API, SDK, webhook catalog, or machine-readable
+specification. All 64 well-known and contract-discovery paths probed across the four company
+hosts on 2026-09-06 returned no document — see
+[`well-known/able42c5-well-known.yml`](well-known/able42c5-well-known.yml). This profile is
+retained as a historical record; there is no API surface to enrich.
+
+The repository slug `able42c5` comes from the EquityZen secondary-market listing
+`https://equityzen.com/company/able42c5`, which matches the Crunchbase slug `able-42c5`. That
+venue listing is **not** Able's web presence and is deliberately not wired as a `Website` pointer.
+
+Current parent: **[Moody's](https://www.moodys.com/)** (`all/moodys`).

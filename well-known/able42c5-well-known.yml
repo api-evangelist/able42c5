@@ -1,0 +1,158 @@
+generated: '2026-09-06'
+method: probed
+source: https://able.ai/
+name: Able well-known + contract discovery probe
+description: >-
+  Negative probe record for Able (able.ai). Able was acquired by Moody's in March 2024 and
+  fully absorbed. Its domains are still held by Moody's registrant entity (MIS Quality
+  Management Corp., CSC Corporate Domains), but the web surface is decommissioned:
+  https://www.able.ai/ terminates every TLS handshake with alert 40 (handshake_failure)
+  and presents NO peer certificate, so no HTTPS request to the canonical host can complete.
+  The apex able.ai and the ableai.com pair only 301/308 into that dead host. The plain-HTTP
+  listener on www.able.ai 301-redirects to Moody's Commercial Lending Solutions page, which
+  is the provider's own confirmation of the absorption. NOT ONE document was retrieved on
+  any host. No WellKnown, SecurityTxt, AgentCard, LLMsTxt, APIsJSON or OpenAPI pointer is
+  emitted from this probe, and none should ever be emitted from it in a later round.
+
+host_status:
+  - host: www.able.ai
+    controlled_by_provider: true
+    disposition: decommissioned
+    reachable_https: false
+    failure: 'TLS alert 40 handshake_failure; no peer certificate available (Cloudflare edge, no certificate configured for this hostname)'
+    dns: www.able.ai CNAME www.able.ai.cdn.cloudflare.net
+    http_port_80: '301 -> https://www.moodys.com/web/en/us/solutions/lending.html'
+  - host: able.ai
+    controlled_by_provider: true
+    disposition: redirector
+    reachable_https: true
+    note: 'Webflow origin (X-Cluster-Name: us-east-1-prod-hosting-red) that 301s every path to https://www.able.ai/<path>, which cannot complete TLS.'
+    registrar: CSC Corporate Domains, Inc.
+    registrant_organization: MIS Quality Management Corp.
+    domain_created: '2018-02-16'
+    domain_updated: '2026-08-12'
+    nameservers:
+      - ns-cloud-c1.googledomains.com
+      - ns-cloud-c2.googledomains.com
+      - ns-cloud-c3.googledomains.com
+      - ns-cloud-c4.googledomains.com
+  - host: ableai.com
+    controlled_by_provider: true
+    disposition: redirector
+    reachable_https: true
+    note: '308 -> https://able.ai:443/ (root, not path-preserving); terminates in the same dead host.'
+    registrar: CSC Corporate Domains, Inc.
+    domain_created: '2016-01-26'
+    domain_expires: '2027-01-26'
+  - host: www.ableai.com
+    controlled_by_provider: true
+    disposition: redirector
+    reachable_https: true
+    note: '308 -> https://able.ai:443/; terminates in the same dead host.'
+
+hit_count: 0
+soft_200_control: not-applicable
+soft_200_note: >-
+  No host answered 200 on any probed path, so the SPA/parking catch-all failure mode does
+  not apply here. The failure mode is the opposite one: the canonical host answers nothing
+  at all over HTTPS.
+path_echo_control: not-applicable
+path_echo_note: >-
+  The negative control /.well-known/able42c5-negative-control-9d1f4a7b.json was issued on
+  every host and returned the same 301/308/TLS-failure as every other path, so no host is
+  path-echoing. With zero hits there is nothing for the control to discard.
+
+hosts:
+  - host: https://www.able.ai
+    documents:
+      - {path: /.well-known/security.txt, status: 0, file: null}
+      - {path: /.well-known/openid-configuration, status: 0, file: null}
+      - {path: /.well-known/oauth-authorization-server, status: 0, file: null}
+      - {path: /.well-known/oauth-protected-resource, status: 0, file: null}
+      - {path: /.well-known/api-catalog, status: 0, file: null}
+      - {path: /.well-known/ai-plugin.json, status: 0, file: null}
+      - {path: /.well-known/agent-card.json, status: 0, file: null}
+      - {path: /.well-known/agent.json, status: 0, file: null}
+      - {path: /.well-known/aauth-resource.json, status: 0, file: null}
+      - {path: /.well-known/apis.json, status: 0, file: null}
+      - {path: /apis.json, status: 0, file: null}
+      - {path: /apis.yml, status: 0, file: null}
+      - {path: /openapi.json, status: 0, file: null}
+      - {path: /swagger.json, status: 0, file: null}
+      - {path: /llms.txt, status: 0, file: null}
+      - {path: '/.well-known/able42c5-negative-control-9d1f4a7b.json', status: 0, file: null}
+  - host: https://able.ai
+    documents:
+      - {path: /.well-known/security.txt, status: 301, file: null}
+      - {path: /.well-known/openid-configuration, status: 301, file: null}
+      - {path: /.well-known/oauth-authorization-server, status: 301, file: null}
+      - {path: /.well-known/oauth-protected-resource, status: 301, file: null}
+      - {path: /.well-known/api-catalog, status: 301, file: null}
+      - {path: /.well-known/ai-plugin.json, status: 301, file: null}
+      - {path: /.well-known/agent-card.json, status: 301, file: null}
+      - {path: /.well-known/agent.json, status: 301, file: null}
+      - {path: /.well-known/aauth-resource.json, status: 301, file: null}
+      - {path: /.well-known/apis.json, status: 301, file: null}
+      - {path: /apis.json, status: 301, file: null}
+      - {path: /apis.yml, status: 301, file: null}
+      - {path: /openapi.json, status: 301, file: null}
+      - {path: /swagger.json, status: 301, file: null}
+      - {path: /llms.txt, status: 301, file: null}
+      - {path: '/.well-known/able42c5-negative-control-9d1f4a7b.json', status: 301, file: null}
+  - host: https://ableai.com
+    documents:
+      - {path: /.well-known/security.txt, status: 308, file: null}
+      - {path: /.well-known/openid-configuration, status: 308, file: null}
+      - {path: /.well-known/oauth-authorization-server, status: 308, file: null}
+      - {path: /.well-known/oauth-protected-resource, status: 308, file: null}
+      - {path: /.well-known/api-catalog, status: 308, file: null}
+      - {path: /.well-known/ai-plugin.json, status: 308, file: null}
+      - {path: /.well-known/agent-card.json, status: 308, file: null}
+      - {path: /.well-known/agent.json, status: 308, file: null}
+      - {path: /.well-known/aauth-resource.json, status: 308, file: null}
+      - {path: /.well-known/apis.json, status: 308, file: null}
+      - {path: /apis.json, status: 308, file: null}
+      - {path: /apis.yml, status: 308, file: null}
+      - {path: /openapi.json, status: 308, file: null}
+      - {path: /swagger.json, status: 308, file: null}
+      - {path: /llms.txt, status: 308, file: null}
+      - {path: '/.well-known/able42c5-negative-control-9d1f4a7b.json', status: 308, file: null}
+  - host: https://www.ableai.com
+    documents:
+      - {path: /.well-known/security.txt, status: 308, file: null}
+      - {path: /.well-known/openid-configuration, status: 308, file: null}
+      - {path: /.well-known/oauth-authorization-server, status: 308, file: null}
+      - {path: /.well-known/oauth-protected-resource, status: 308, file: null}
+      - {path: /.well-known/api-catalog, status: 308, file: null}
+      - {path: /.well-known/ai-plugin.json, status: 308, file: null}
+      - {path: /.well-known/agent-card.json, status: 308, file: null}
+      - {path: /.well-known/agent.json, status: 308, file: null}
+      - {path: /.well-known/aauth-resource.json, status: 308, file: null}
+      - {path: /.well-known/apis.json, status: 308, file: null}
+      - {path: /apis.json, status: 308, file: null}
+      - {path: /apis.yml, status: 308, file: null}
+      - {path: /openapi.json, status: 308, file: null}
+      - {path: /swagger.json, status: 308, file: null}
+      - {path: /llms.txt, status: 308, file: null}
+      - {path: '/.well-known/able42c5-negative-control-9d1f4a7b.json', status: 308, file: null}
+
+contract_discovery:
+  openapi_rest: {result: miss, note: 'No reachable API host. No baseURL or servers[] host has ever been recorded for Able, and every candidate spec path on all four company hosts terminates in the dead www.able.ai TLS listener.'}
+  graphql_introspection: {result: not-applicable, note: 'No /graphql surface documented or reachable.'}
+  mcp_tools_list: {result: not-applicable, note: 'No MCP endpoint published or discoverable.'}
+  a2a_agent_card: {result: miss, note: 'Probed /.well-known/agent-card.json and the legacy /.well-known/agent.json on all four hosts; none returned a body. Per the pipeline contract no a2a/ artifact is written.'}
+  ogc: {result: not-applicable, note: 'No geospatial evidence anywhere in the record or the archived site.'}
+  wsdl: {result: miss, note: 'No ?wsdl / ?singleWsdl surface; no reachable host to serve one.'}
+  grpc_protobuf: {result: miss, note: 'No GitHub organization (api.github.com/orgs/able-ai, /ableai, /able-inc all 404) and no buf.build presence.'}
+  packages: {result: miss, note: 'npm registry search for able.ai returns nothing first-party; PyPI "able" is Allthenticate''s Bluetooth Low Energy library (home_page allthenticate.com), an unrelated project.'}
+  archived_site: {result: 'no-developer-surface', note: 'The Internet Archive holds 20 distinct able.ai URLs from 2021-2025: /, /careers, /company, /contact, /contact-sales-form, /platform, /security, /privacy-policy, /terms-of-service, /terms-of-use, /search, /sitemap.xml, /robots.txt and Webflow leftovers (/old-home, /old-platform, /copy-of-template) plus three product landing pages. There is no /docs, /developers, /api or reference path in the archive. The last HTTP 200 snapshot of the homepage is 2024-03-28.'}
+
+evidence:
+  - {url: 'https://able.ai/.well-known/security.txt', status: 301, note: 'Location: https://www.able.ai/.well-known/security.txt'}
+  - {url: 'https://www.able.ai/.well-known/security.txt', status: 0, note: 'TLS alert 40 handshake_failure, no peer certificate available'}
+  - {url: 'http://www.able.ai/.well-known/security.txt', status: 301, note: 'Location: https://www.moodys.com/web/en/us/solutions/lending.html'}
+  - {url: 'https://ableai.com/.well-known/security.txt', status: 308, note: 'Location: https://able.ai:443/'}
+  - {url: 'https://www.moodys.com/web/en/us/solutions/lending.html', status: 200, note: 'The acquirer page able.ai redirects to over plain HTTP'}
+  - {url: 'https://api.github.com/orgs/able-ai', status: 404}
+  - {url: 'https://api.github.com/orgs/ableai', status: 404}
+  - {url: 'https://equityzen.com/company/able42c5/', status: 200, note: 'Harvest source; EquityZen secondary-market listing, title "Invest In Able Stock"'}
