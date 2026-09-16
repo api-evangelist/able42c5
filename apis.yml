@@ -1,65 +1,58 @@
 aid: able42c5
 name: Able
-description: >-
-  Able was a San Francisco artificial-intelligence company for commercial lending, founded in
-  2020 by Diego Represas and Andrew Hurst and operating at able.ai. Its platform used computer
-  vision, robotic process automation and machine learning to collect, read and categorize
-  borrower documentation for high-value commercial loan transactions, generating
-  transaction-aware document checklists, sending automated follow-up reminders to the borrowing
-  team, and giving lenders, borrowers and third parties such as appraisers, guarantors and
-  insurers a single collaborative workspace with per-document access controls. It sold to banks
-  and lenders rather than to borrowers, exited stealth in June 2022 with a $20M Series A led by
-  Canapi Ventures with participation from Human Capital, demonstrated at FinovateFall 2022, and
-  advertised SOC 2 compliance. Moody's acquired Able in March 2024 and absorbed it into its
-  lending technology portfolio alongside Numerated Growth Technologies. The able.ai and
-  ableai.com domains are still registered to Moody's registrant entity MIS Quality Management
-  Corp. through CSC Corporate Domains, but the web surface is decommissioned: https://www.able.ai/
-  presents no TLS certificate and fails every handshake, while the plain-HTTP listener on that
-  host 301-redirects to Moody's Commercial Lending Solutions page. Able never published a
-  developer portal, public API, SDK, webhook catalog or machine-readable specification; the
-  archived site, whose last HTTP 200 homepage snapshot is 2024-03-28, carried only marketing,
-  company, security, careers and legal pages. This profile is retained as a historical record;
-  there is no API surface to enrich.
+description: 'Able was a San Francisco artificial-intelligence company for commercial lending, founded
+  in 2020 by Diego Represas and Andrew Hurst and operating at able.ai. Its platform used computer vision,
+  robotic process automation and machine learning to collect, read and categorize borrower documentation
+  for high-value commercial loan transactions, generating transaction-aware document checklists, sending
+  automated follow-up reminders to the borrowing team, and giving lenders, borrowers and third parties
+  such as appraisers, guarantors and insurers a single collaborative workspace with per-document access
+  controls. It sold to banks and lenders rather than to borrowers, exited stealth in June 2022 with a
+  $20M Series A led by Canapi Ventures with participation from Human Capital, demonstrated at FinovateFall
+  2022, and advertised SOC 2 compliance. Moody''s acquired Able in March 2024 and absorbed it into its
+  lending technology portfolio alongside Numerated Growth Technologies. The able.ai and ableai.com domains
+  are still registered to Moody''s registrant entity MIS Quality Management Corp. through CSC Corporate
+  Domains, but the web surface is decommissioned: https://www.able.ai/ presents no TLS certificate and
+  fails every handshake, while the plain-HTTP listener on that host 301-redirects to Moody''s Commercial
+  Lending Solutions page. Able never published a developer portal, public API, SDK, webhook catalog or
+  machine-readable specification; the archived site, whose last HTTP 200 homepage snapshot is 2024-03-28,
+  carried only marketing, company, security, careers and legal pages. This profile is retained as a historical
+  record; there is no API surface to enrich.'
 url: https://raw.githubusercontent.com/api-evangelist/able42c5/refs/heads/main/apis.yml
 x-harvest-source-url: https://equityzen.com/company/able42c5
 x-type: company
 x-source: harvest:secondary-market
 x-tier: stub
 x-tier-reason: defunct-no-api-surface
-x-status: absorbed
+x-status: defunct
 x-founded: '2020'
 x-headquarters: San Francisco, California, United States
-x-acquired-date: '2024-03'
+x-acquired-date: 2024-03
 x-acquired-by: Moody's Corporation
 x-parent-company: moodys
-x-acquisition-note: >-
-  Moody's acquired Able in March 2024. Able's own LinkedIn announcement ("Able is now part of
-  Moody's") and Moody's 2024 reporting record the transaction; Moody's redirects
-  http://www.able.ai/ to https://www.moodys.com/web/en/us/solutions/lending.html, which is the
-  acquirer's own confirmation of where the product went.
+x-acquisition-note: Moody's acquired Able in March 2024. Able's own LinkedIn announcement ("Able is now
+  part of Moody's") and Moody's 2024 reporting record the transaction; Moody's redirects http://www.able.ai/
+  to https://www.moodys.com/web/en/us/solutions/lending.html, which is the acquirer's own confirmation
+  of where the product went.
 x-domain-status: retained-by-acquirer-decommissioned
-x-domain-note: >-
-  able.ai (created 2018-02-16, updated 2026-08-12) and ableai.com (created 2016-01-26, expires
-  2027-01-26) are both registered through CSC Corporate Domains with Google Cloud nameservers;
-  able.ai's registrant organization is MIS Quality Management Corp., Moody's Investors Service's
-  corporate registrant. The apex able.ai still answers from a Webflow origin but 301s every path
-  to https://www.able.ai/, whose Cloudflare edge presents NO certificate and aborts TLS with
-  alert 40 (handshake_failure). ableai.com and www.ableai.com 308 to https://able.ai:443/. No
-  path on any of the four hosts returns a document, so no Website pointer is wired and no
-  well-known/spec pointer is emitted. See well-known/able42c5-well-known.yml.
-x-venue-note: >-
-  The harvest source https://equityzen.com/company/able42c5 is an EquityZen secondary-market
-  listing, not Able's web presence, and is deliberately NOT wired as a Website pointer
-  (roadmap#56). The EquityZen slug's 42c5 suffix matches Crunchbase's able-42c5, which is how
-  this record was resolved from the placeholder name "Able42c5" to the company Able.
+x-domain-note: able.ai (created 2018-02-16, updated 2026-08-12) and ableai.com (created 2016-01-26, expires
+  2027-01-26) are both registered through CSC Corporate Domains with Google Cloud nameservers; able.ai's
+  registrant organization is MIS Quality Management Corp., Moody's Investors Service's corporate registrant.
+  The apex able.ai still answers from a Webflow origin but 301s every path to https://www.able.ai/, whose
+  Cloudflare edge presents NO certificate and aborts TLS with alert 40 (handshake_failure). ableai.com
+  and www.ableai.com 308 to https://able.ai:443/. No path on any of the four hosts returns a document,
+  so no Website pointer is wired and no well-known/spec pointer is emitted. See well-known/able42c5-well-known.yml.
+x-venue-note: The harvest source https://equityzen.com/company/able42c5 is an EquityZen secondary-market
+  listing, not Able's web presence, and is deliberately NOT wired as a Website pointer (roadmap#56). The
+  EquityZen slug's 42c5 suffix matches Crunchbase's able-42c5, which is how this record was resolved from
+  the placeholder name "Able42c5" to the company Able.
 specificationVersion: '0.23'
 created: '2026-09-06'
-modified: '2026-09-06'
+modified: '2026-09-15'
 tags:
 - Company
 - Acquired
 - Defunct
-- Financial Services
+- Financial-Services
 - Fintech
 - Lending
 - Commercial Lending
@@ -86,12 +79,10 @@ maintainers:
 x-coverage:
   state: none
   reason: defunct
-  detail: >-
-    Moody's acquired Able in March 2024 and decommissioned able.ai — https://www.able.ai/ now
-    aborts every TLS handshake with alert 40 and presents no certificate, the apex able.ai and
-    the ableai.com pair only redirect into that dead host, and the plain-HTTP listener
-    301-redirects to Moody's Commercial Lending Solutions page, so not one of the 64 probed
-    well-known and contract paths returned a document.
+  detail: Moody's acquired Able in March 2024 and decommissioned able.ai — https://www.able.ai/ now aborts
+    every TLS handshake with alert 40 and presents no certificate, the apex able.ai and the ableai.com
+    pair only redirect into that dead host, and the plain-HTTP listener 301-redirects to Moody's Commercial
+    Lending Solutions page, so not one of the 64 probed well-known and contract paths returned a document.
   evidence:
   - url: https://www.able.ai/.well-known/security.txt
     status: 0
