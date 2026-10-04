@@ -52,7 +52,7 @@ tags:
 - Company
 - Acquired
 - Defunct
-- Financial-Services
+- Financial Services
 - Fintech
 - Lending
 - Commercial Lending
@@ -70,6 +70,7 @@ tags_raw:
 - Loan Origination
 - Document Automation
 - Artificial Intelligence
+- Financial-Services
 apis: []
 maintainers:
 - FN: Kin Lane
