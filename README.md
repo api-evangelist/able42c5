@@ -1,4 +1,4 @@
-# Able42c5
+# Able
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -64,28 +64,28 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Able was a San Francisco artificial-intelligence company for commercial lending, founded in 2020
-by Diego Represas and Andrew Hurst and operating at able.ai. Its platform used computer vision,
-RPA and machine learning to collect and categorize borrower documentation for high-value
-commercial loan transactions, generating transaction-aware document checklists and giving
-lenders, borrowers and third parties a shared workspace with per-document access controls. It
-exited stealth in June 2022 with a $20M Series A led by Canapi Ventures with participation from
-Human Capital, demonstrated at FinovateFall 2022, and advertised SOC 2 compliance.
+> **No longer operating.** This company or product has shut down, been discontinued, or been deprecated. This profile is kept as a historical record and is not maintained or rated.
 
-**Moody's acquired Able in March 2024** and absorbed it into its lending technology portfolio.
-The able.ai and ableai.com domains remain registered to Moody's registrant entity (MIS Quality
-Management Corp., CSC Corporate Domains), but the site is decommissioned: `https://www.able.ai/`
-presents no TLS certificate and aborts every handshake, and the plain-HTTP listener on that host
-301-redirects to Moody's Commercial Lending Solutions page.
+Able was a San Francisco artificial-intelligence company for commercial lending, founded in 2020 by Diego Represas and Andrew Hurst and operating at able.ai. Its platform used computer vision, robotic process automation and machine learning to collect, read and categorize borrower documentation for high-value commercial loan transactions, generating transaction-aware document checklists, sending automated follow-up reminders to the borrowing team, and giving lenders, borrowers and third parties such as appraisers, guarantors and insurers a single collaborative workspace with per-document access controls. It sold to banks and lenders rather than to borrowers, exited stealth in June 2022 with a $20M Series A led by Canapi Ventures with participation from Human Capital, demonstrated at FinovateFall 2022, and advertised SOC 2 compliance. Moody's acquired Able in March 2024 and absorbed it into its lending technology portfolio alongside Numerated Growth Technologies. The able.ai and ableai.com domains are still registered to Moody's registrant entity MIS Quality Management Corp. through CSC Corporate Domains, but the web surface is decommissioned: https://www.able.ai/ presents no TLS certificate and fails every handshake, while the plain-HTTP listener on that host 301-redirects to Moody's Commercial Lending Solutions page. Able never published a developer portal, public API, SDK, webhook catalog or machine-readable specification; the archived site, whose last HTTP 200 homepage snapshot is 2024-03-28, carried only marketing, company, security, careers and legal pages. This profile is retained as a historical record; there is no API surface to enrich.
 
-Able never published a developer portal, public API, SDK, webhook catalog, or machine-readable
-specification. All 64 well-known and contract-discovery paths probed across the four company
-hosts on 2026-09-06 returned no document — see
-[`well-known/able42c5-well-known.yml`](well-known/able42c5-well-known.yml). This profile is
-retained as a historical record; there is no API surface to enrich.
+**Areas:** Company · Acquired · Defunct · Financial Services · Fintech · Lending · Commercial Lending · Loan Origination · Document Automation · Artificial Intelligence
 
-The repository slug `able42c5` comes from the EquityZen secondary-market listing
-`https://equityzen.com/company/able42c5`, which matches the Crunchbase slug `able-42c5`. That
-venue listing is **not** Able's web presence and is deliberately not wired as a `Website` pointer.
+## Able on APIs.io (historical record)
 
-Current parent: **[Moody's](https://www.moodys.com/)** (`all/moodys`).
+Everything profiled for Able is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/able42c5/](https://apis.io/providers/able42c5/)** — or go straight to one of the APIs or properties below.
+
+## API Evangelist rating
+
+**Not rated** — this company is recorded as no longer operating, so no score is published. If it is in fact operating, say so on this repository and it will be re-profiled.
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Able: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/able42c5/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
